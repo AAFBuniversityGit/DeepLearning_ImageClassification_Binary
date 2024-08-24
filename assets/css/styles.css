@@ -4,33 +4,22 @@ body {
     padding: 0;
     color: #444;
     line-height: 1.6;
+    background-color: #f5f5f5;
 }
 
 header {
-    background-image: url('A_sleek,_modern_header_image_for_a_GitHub_Pages_we.png');
+    background-image: url('../images/header.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
     text-align: center;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
 .header-content {
-    position: relative;
-    z-index: 2;
     max-width: 800px;
     padding: 20px;
 }
@@ -76,6 +65,7 @@ nav ul li a:hover {
 
 .content-section {
     padding: 60px 0;
+    background-color: #ffffff;
 }
 
 .container {
