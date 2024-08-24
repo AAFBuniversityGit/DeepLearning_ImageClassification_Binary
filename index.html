@@ -4,94 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Learning Image Classification</title>
+    <title>Deep Learning for Binary Image Classification</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <header>
+        <div class="overlay"></div>
         <div class="header-content">
-            <img src="assets/images/header.webp" alt="DeepLearning Image Classification Binary">
-            <h1>Advanced Deep Learning for Binary Image Classification</h1>
-            <p>Harnessing the Power of AI to Automate Visual Inspection Tasks Using ML.NET</p>
+            <img src="assets/images/header.webp" alt="DeepLearningforBinaryImageClassification">
+            <h1>Deep Learning for Binary Image Classification</h1>
+            <p>Leveraging AI and Transfer Learning to Automate Complex Visual Tasks with ML.NET</p>
         </div>
     </header>
 
-    <section class="introduction">
-        <div class="container">
-            <h2>Introduction</h2>
-            <p>Artificial Intelligence (AI) and Deep Learning have revolutionized the field of computer vision, enabling
-                machines to interpret and categorize visual data with unprecedented accuracy. This project focuses on
-                building a robust binary image classification model using ML.NET, which leverages the power of
-                pre-trained neural networks through transfer learning. The model is trained to perform automated visual
-                inspections, such as detecting structural damage in bridge decks. By reusing knowledge from a
-                pre-trained model, we can significantly reduce the training time while achieving high accuracy in
-                predictions.</p>
-        </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#implementation">Implementation</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section class="overview">
+    <section id="overview" class="content-section">
         <div class="container">
             <h2>Project Overview</h2>
-            <p>The project uses the 101-layer ResNet v2 model, a state-of-the-art convolutional neural network (CNN)
-                architecture, as the foundation for transfer learning. The process involves two main phases:</p>
-            <ul>
-                <li><strong>Bottleneck Phase:</strong> Extracts features from images using the frozen layers of the
-                    pre-trained model.</li>
-                <li><strong>Training Phase:</strong> Trains the final layer of the model using the extracted features to
-                    distinguish between two classes.</li>
-            </ul>
-            <p>This approach allows us to quickly develop a model that can be deployed in real-world scenarios where
-                automated visual inspection is crucial.</p>
+            <p>Binary Image Classification is a vital application of deep learning in the field of computer vision. This
+                project focuses on building a high-performance binary image classification model using ML.NET, a
+                powerful machine learning framework for .NET developers. By leveraging transfer learning and a
+                pre-trained ResNet v2 model, this project demonstrates how to effectively automate the visual inspection
+                process, such as identifying structural damage in bridge decks.</p>
+            <p>Transfer learning allows us to utilize the extensive knowledge embedded in a pre-trained model,
+                drastically reducing the training time while ensuring high accuracy. The use of ML.NET makes this
+                approach accessible and efficient for developers working within the .NET ecosystem.</p>
         </div>
     </section>
 
-    <section class="details">
+    <section id="implementation" class="content-section">
         <div class="container">
             <h2>Implementation Details</h2>
-            <h3>Data Preprocessing</h3>
-            <p>Images are loaded and preprocessed by resizing and normalizing pixel values. Labels are converted to keys
-                for efficient model training.</p>
-            <h3>Model Training</h3>
-            <p>The training pipeline utilizes the ResNet v2 architecture, optimized for binary classification tasks. The
-                model undergoes multiple iterations of training, with regular evaluation of metrics such as accuracy and
-                loss.</p>
-            <h3>Evaluation</h3>
-            <p>The model's performance is assessed using a separate test dataset, ensuring that it generalizes well to
-                unseen data. Key metrics, including precision, recall, and F1 score, are calculated to evaluate the
-                model's effectiveness.</p>
-            <h3>Prediction</h3>
-            <p>The trained model is used to classify new images, providing predictions with confidence scores.</p>
+            <h3>Data Preparation</h3>
+            <p>The project begins with preparing the dataset, where images are resized, normalized, and labeled. The
+                images are split into training, validation, and test sets to ensure a robust evaluation of the model.
+            </p>
+            <h3>Model Architecture</h3>
+            <p>The model is based on the 101-layer ResNet v2 architecture, renowned for its depth and ability to capture
+                intricate features in images. The pre-trained layers of ResNet are used as the foundation, with only the
+                final classification layers being retrained to distinguish between the two target classes.</p>
+            <h3>Training Process</h3>
+            <p>The training process is divided into two phases:</p>
+            <ul>
+                <li><strong>Bottleneck Phase:</strong> Features are extracted using the frozen layers of the ResNet
+                    model, which act as a high-level feature detector.</li>
+                <li><strong>Training Phase:</strong> The final classification layer is trained on the extracted features
+                    to distinguish between the binary classes. The model is iteratively refined to optimize accuracy and
+                    minimize loss.</li>
+            </ul>
         </div>
     </section>
 
-    <section class="results">
+    <section id="results" class="content-section">
         <div class="container">
-            <h2>Results</h2>
-            <p>The model achieved an accuracy of [insert accuracy]% on the test dataset, demonstrating its capability to
-                reliably differentiate between the two classes. The low loss and high precision metrics indicate that
-                the model is well-suited for deployment in environments requiring automated visual inspections, such as
-                infrastructure monitoring or medical diagnostics.</p>
+            <h2>Results and Evaluation</h2>
+            <p>The model's performance is evaluated using key metrics such as accuracy, precision, recall, and F1 score.
+                On the test dataset, the model achieved a remarkable accuracy of [insert accuracy]%, showcasing its
+                capability to reliably differentiate between the two target classes. The results are indicative of the
+                model's effectiveness in practical scenarios, where accurate image classification is critical.</p>
+            <p>The trained model is not only efficient but also scalable, making it suitable for deployment in various
+                environments, from infrastructure monitoring to medical diagnostics.</p>
         </div>
     </section>
 
-    <section class="conclusion">
+    <section id="conclusion" class="content-section">
         <div class="container">
             <h2>Conclusion</h2>
-            <p>This project illustrates the power of combining transfer learning with deep learning frameworks like
-                ML.NET to develop highly effective AI models in a fraction of the time it would take to train from
-                scratch. The binary image classification model created here can be adapted and expanded for various
-                real-world applications, showcasing the versatility and potential of AI in solving complex visual tasks.
-            </p>
+            <p>This project highlights the power and flexibility of using deep learning and transfer learning techniques
+                in binary image classification tasks. By leveraging ML.NET and the ResNet v2 architecture, developers
+                can create efficient and accurate models for complex visual tasks. The model developed in this project
+                is a testament to the potential of AI in automating and improving decision-making processes in critical
+                areas such as infrastructure and healthcare.</p>
+            <p>Future work could involve expanding the model to handle multi-class classification tasks or integrating
+                it into real-time systems for continuous monitoring and alerting.</p>
         </div>
     </section>
 
-    <footer>
+    <footer id="contact" class="content-section">
         <div class="container">
             <p>&copy; 2024 Deep Learning Image Classification Project. All rights reserved.</p>
-            <p><a href="https://github.com/YourRepository">GitHub Repository</a> | <a
-                    href="https://twitter.com/YourProfile">Twitter</a> | <a href="mailto:your.email@example.com">Contact
-                    Us</a></p>
+            <p><a href="https://github.com/AAFBuniversityGit/DeepLearning_ImageClassification_Binary">GitHub Repository</a></p>
         </div>
     </footer>
 </body>

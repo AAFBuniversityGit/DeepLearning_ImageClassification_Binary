@@ -1,8 +1,8 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #444;
     line-height: 1.6;
 }
 
@@ -10,58 +10,101 @@ header {
     background-image: url('A_sleek,_modern_header_image_for_a_GitHub_Pages_we.png');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 100vh;
     color: white;
     text-align: center;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 20px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    padding: 60px 0;
 }
 
 .container {
     width: 80%;
-    margin: 20px auto;
+    margin: auto;
 }
 
 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+h3 {
     font-size: 2rem;
+    margin-top: 30px;
     margin-bottom: 15px;
     color: #007BFF;
 }
 
-h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #0056b3;
-}
-
 p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     line-height: 1.8;
 }
 
 ul {
     list-style-type: disc;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 ul li {
@@ -69,11 +112,11 @@ ul li {
 }
 
 footer {
-    background-color: #f8f9fa;
-    color: #6c757d;
+    background-color: #333;
+    color: #f1f1f1;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 footer p {
@@ -97,6 +140,11 @@ footer a:hover {
 
     header p {
         font-size: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 
     .container {
