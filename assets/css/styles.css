@@ -1,64 +1,105 @@
-/* styles.css */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-image: url('A_sleek,_modern_header_image_for_a_GitHub_Pages_we.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
+.header-content {
+    max-width: 800px;
 }
 
 header h1 {
-    margin: 0;
-    padding: 10px 0;
-    font-size: 2em;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-main {
-    padding: 20px;
+header p {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-section {
-    margin-bottom: 20px;
+.container {
+    width: 80%;
+    margin: 20px auto;
 }
 
 h2 {
-    color: #444;
-    font-size: 1.5em;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
     margin-bottom: 10px;
+    color: #0056b3;
 }
 
 p {
-    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
     margin-bottom: 10px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f8f9fa;
+    color: #6c757d;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
-@media (min-width: 768px) {
-    main {
-        max-width: 800px;
-        margin: 0 auto;
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
     }
 }
