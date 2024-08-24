@@ -21,7 +21,7 @@ The model follows these key steps:
 
 ## Requirements
 
-- .NET 6.0 SDK or later
+- .NET 8.0 SDK or later
 - ML.NET 2.0 or later
 
 ## How to Run
